@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dados do Aluno</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .logo {
+      margin: 30px 0 10px 0;
+    }
+    .dados {
+      max-width: 500px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: left;
+    }
+    .dados h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    .linha {
+      margin: 8px 0;
+    }
+    .label {
+      font-weight: bold;
+      color: #333;
+    }
+    .rodape {
+      font-size: 12px;
+      margin-top: 15px;
+      color: #666;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://imgsapp2.correiobraziliense.com.br/app/noticia_127983242361/2019/03/22/744712/20190322150337662628a.png" 
+         alt="Logo UNIP" width="200">
+  </div>
+
+  <!-- Dados -->
+  <div class="dados">
+    <h2>Dados do Aluno</h2>
+    <div class="linha"><span class="label">Matrícula:</span> 1046832</div>
+    <div class="linha"><span class="label">Nome:</span> ADRIANO DE ARAÚJO BATISTA</div>
+    <div class="linha"><span class="label">RG:</span> 452894098</div>
+    <div class="linha"><span class="label">Nascimento:</span> 11/07/1993</div>
+    <div class="linha"><span class="label">Curso:</span> 51835 - ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</div>
+    <div class="linha"><span class="label">Unidade:</span> 2415 - SÃO JOSÉ DOS CAMPOS</div>
+    <div class="linha"><span class="label">Carteirinha:</span> <span style="color:green;font-weight:bold;">ATIVA</span></div>
+    <div class="linha"><span class="label">Validade:</span> Dezembro/2026</div>
+
+    <div class="rodape">Data: <span id="data-atual"></div>
+  </div>
+<script>
+  // 1. O JS pega a data de hoje do computador
+  var hoje = new Date();
+
+  // 2. Ele transforma essa data no formato do Brasil (dia/mês/ano)
+  var dataFormatada = hoje.toLocaleDateString('pt-BR');
+
+  // 3. Ele procura o lugar com id "data-atual" e escreve a data lá dentro
+  document.getElementById('data-atual').innerHTML = dataFormatada;
+</script>
+</body>
+</html>
